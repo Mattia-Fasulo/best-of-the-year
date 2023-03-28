@@ -10,8 +10,12 @@
 </head>
 <body>
 <nav th:replace="~{fragments :: navbar('home')}"></nav>
-<div>
-    <h1>Best of the year <span th:text="${user}"></span></h1>
-</div>
+<section class="container mt-5 w-100">
+    <h1 class="text-center">Best of the year by <span th:text="${user}"></span></h1>
+    <div class="container d-flex flex-column align-items-center mt-3">
+        <img class="w-50" th:src="@{/img.jpeg}" alt="jumbo">
+        <p class="w-50 mt-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+</section>
 </body>
 </html>

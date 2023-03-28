@@ -11,10 +11,18 @@
 <body>
 <div>
     <nav th:replace="~{fragments :: navbar('songs')}"></nav>
-    <h1>Best Songs</h1>
-    <ul>
-        <li th:each="song : ${songs}"><a th:href="@{|/songs/${song.id}|}" th:text="${song.title}"></a></li>
-    </ul>
+
+    <section class="container mt-5 w-100">
+        <h1 class="text-center">Best Songs</h1>
+        <div class="container d-flex flex-column align-items-center mt-3">
+            <ul class="list-group">
+                <li th:each="song : ${songs}" class="list-group-item ">
+                    <a class="text-decoration-none" th:href="@{|/songs/${song.id}|}" th:text="${song.title}"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
 </div>
 </body>
 </html>
