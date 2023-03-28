@@ -8,13 +8,13 @@
 </head>
 <body>
 <div>
-    <h1>Detail movie: </h1>
-    <h2>
-        ID: <span th:text="${movie.getId()}"></span>
-    </h2>
-    <h2>
-        Title: <span th:text="${movie.getTitle()}"></span>
-    </h2>
+    <div th:object="${movie}">
+        <h1>Detail movie: </h1>
+        <h2 th:text="|ID: *{id}|"></h2>
+        <h2 th:text="|Title: *{title}|"></h2>
+        <h2 th:text="|Director: *{director}|"></h2>
+    </div>
+
 
 </div>
 </body>

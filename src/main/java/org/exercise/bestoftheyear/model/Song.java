@@ -1,24 +1,34 @@
 package org.exercise.bestoftheyear.model;
 
-public class Song {
-    static int count = 1;
-    private int id;
-    private String title;
+public class Song extends Content{
+    private String author;
 
-    public Song( String title) {
-        this.id = count;
-        this.title = title;
-        count++;
-        if(count >= 4){
-            count = 1;
-        }
+    public Song(int id, String title, String author) {
+        super(id, title);
+        this.author = author;
     }
 
+
     public int getId() {
-        return id;
+        return super.getId();
     }
 
     public String getTitle() {
-        return title;
+        return super.getTitle();
+    }
+
+
+
+    public String getAuthor() {
+        return author;
+    }
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "id=" + super.getId() +
+                ", title='" + super.getTitle() + '\'' +
+                "author='" + author + '\'' +
+                '}';
     }
 }

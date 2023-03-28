@@ -1,32 +1,32 @@
 package org.exercise.bestoftheyear.model;
 
-public class Movie {
-    static int count = 1;
-    private int id;
-    private String title;
+public class Movie  extends Content{
+    private String director;
 
-    public Movie( String title) {
-        this.id = count;
-        this.title = title;
-        count++;
-        if(count >= 4){
-            count = 1;
-        }
+    public Movie(int id, String title, String director) {
+        super(id, title);
+        this.director = director;
     }
 
+
     public int getId() {
-        return id;
+        return super.getId();
     }
 
     public String getTitle() {
-        return title;
+        return super.getTitle();
+    }
+
+    public String getDirector() {
+        return director;
     }
 
     @Override
     public String toString() {
         return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
+                "id=" + super.getId() +
+                ", title='" + super.getTitle() + '\'' +
+                "director='" + director + '\'' +
                 '}';
     }
 }
