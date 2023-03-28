@@ -10,13 +10,18 @@
 <body>
 <div>
     <nav th:replace="~{fragments :: navbar('songs')}"></nav>
-    <div th:object="${song}">
-        <h1>Detail song: </h1>
-        <h2 th:text="|ID: *{id}|"></h2>
-        <h2 th:text="|Title: *{title}|"></h2>
-        <h2 th:text="|Author: *{author}|"></h2>
+    <div th:object="${song}" class="container">
+        <div class="mt-5">
+            <h1 class="mb-3">Detail song: </h1>
+            <h3 th:text="|ID: *{id}|"></h3>
+            <h3 th:text="|Title: *{title}|"></h3>
+            <h3 th:text="|Author: *{author}|"></h3>
+        </div>
     </div>
 
+
+
+    <th:block th:replace="~{fragments :: scripts}"></th:block>
 
 </div>
 </body>
