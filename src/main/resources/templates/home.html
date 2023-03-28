@@ -5,9 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <div th:replace="~{fragments :: resources}"></div>
     <title>Home</title>
 </head>
 <body>
+<nav th:replace="~{fragments :: navbar('home')}"></nav>
 <div>
     <h1>Best of the year <span th:text="${user}"></span></h1>
 </div>

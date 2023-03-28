@@ -4,10 +4,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <div th:replace="~{fragments :: resources}"></div>
     <title>Song</title>
 </head>
 <body>
 <div>
+    <nav th:replace="~{fragments :: navbar('songs')}"></nav>
     <div th:object="${song}">
         <h1>Detail song: </h1>
         <h2 th:text="|ID: *{id}|"></h2>
